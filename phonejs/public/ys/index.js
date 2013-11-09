@@ -1,27 +1,51 @@
 ﻿"use strict";
 
-window.MyApp = {};
+window.YogaScript = {};
 
 $(function() {
     // "iPhone", "iPhone5", "iPad", "iPadMini", "androidPhone", "androidTablet", "win8", "win8Phone", "msSurface", "desktop" and "tizen". 
-    DevExpress.devices.current('iPad');
-    MyApp.app = new DevExpress.framework.html.HtmlApplication({
-        namespace: MyApp,
+    DevExpress.devices.current('androidTablet');
+    YogaScript.app = new DevExpress.framework.html.HtmlApplication({
+        namespace: YogaScript,
         
-        defaultLayout: "navbar", //"slideout", //"navbar",
-        navigation: [
-          {
-            title: "Home",
-            action: "#home",
-            icon: "home"
-          },
-          {
-            title: "About",
-            action: "#about",
-            icon: "info"
-          }
-        ]
+        defaultLayout: "default", //slideout, navbar, simple, desktop, empty, split
+        // navigation: [
+          // {
+            // title: "About",
+            // action: "#about",
+            // icon: "info"
+          // },
+          // {
+            // title: "Home",
+            // action: "#home",
+            // icon: "home"
+          // },
+        // ]
+        
+        
     });
-    MyApp.app.router.register(":view", {view: "home"});
-    MyApp.app.navigate();   
+    
+    YogaScript.app.router.register(":view", {view: "home"});
+    YogaScript.app.navigate();   
 });
+
+YogaScript.notify = function(message) {
+  var el = $("#toastContainer").dxToast('instance');
+  el.option("message", message);
+  el.show();
+}
+
+YogaScript.home = function () {
+  return {
+    doTraining: function () {
+      YogaScript.notify("Training!");
+    },
+    doSchedule: function () {
+      YogaScript.notify("Show schedule");
+    },
+    doAbout: function () {
+      YogaScript.notify("Show About");
+    },
+  };
+}
+  

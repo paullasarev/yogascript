@@ -7,3 +7,9 @@
 4. browse http://localhost:3000/ys
 
 the whole ./public/ folder is statically exposed by express web-server
+
+Using the 'nodemon' utility.
+It is quite convinitent to use the 'nodemon' to automagically restart node on any changes in sources.
+* run 'npm install -g nodemon'
+* run 'nodemon app.js'
+* on any changes in sources tree the 'node' will be restarted by 'nodemon'
