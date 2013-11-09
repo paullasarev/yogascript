@@ -1,4 +1,4 @@
-﻿MyApp.home = function (params) {
+﻿YogaScript.home = function (params) {
 
     var viewModel = {
 //  Put the binding properties here

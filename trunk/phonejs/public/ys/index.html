@@ -29,17 +29,56 @@
     <script type="text/javascript" src="index.js"></script>    
 
     <!-- Layouts -->
+    <!--
+    <script type="text/javascript" src="layouts/Simple/SimpleLayout.js"></script>
+    <link rel="stylesheet" type="text/css" href="layouts/Simple/SimpleLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/Simple/SimpleLayout.html"/>
+    -->
+
+    <!--
+    <script type="text/javascript" src="layouts/SlideOut/SlideOutLayout.js"></script>
+    <link rel="stylesheet" type="text/css" href="layouts/SlideOut/SlideOutLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/SlideOut/SlideOutLayout.html"/>
+    -->
+    
+    <!--
     <script type="text/javascript" src="layouts/Navbar/NavbarLayout.js"></script>
     <link rel="stylesheet" type="text/css" href="layouts/Navbar/NavbarLayout.css" />
     <link rel="dx-template" type="text/html" href="layouts/Navbar/NavbarLayout.html"/>
-
+    -->
+    
     <!-- App views -->
+    <!--
     <link rel="stylesheet" type="text/css" href="views/home.css" />
     <script type="text/javascript" src="views/home.js"></script>
     <link rel="dx-template" type="text/html" href="views/home.html"/>
     <link rel="dx-template" type="text/html" href="views/about.html"/>
+    -->
 </head>
 <body>
-    <div class="dx-viewport"></div>
+  <!--<div class="dx-viewport"></div>-->
+  
+  <div data-options="dxLayout : { name: 'default' } " >
+      <div data-options="dxContentPlaceholder  : { name: 'content', transition: 'slide' } "></div>
+  </div>    
+  
+  <div data-options="dxView : { name: 'home' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content'}" style="text-align:center">
+      <br>
+      <div>Yoga Script</div>
+      
+      <div style="margin-top:20px">
+        <div class="button" data-bind="dxButton:{text:'Training', clickAction: doTraining, width:'80%'}"></div>
+        <div class="button" data-bind="dxButton:{text:'Schedule', clickAction: doSchedule, width:'80%'}"></div>
+      </div>
+      <div style="margin-top:20px">
+        <div class="button" data-bind="dxButton:{text:'About', clickAction: doAbout, width:'80%'}"></div>
+      </div>
+
+      <div id="toastContainer" data-bind="dxToast:{message:'Action message', type:'success', displayTime: 3000 }"></div> 
+
+    </div>
+  </div>
+ 
 </body>
 </html>
