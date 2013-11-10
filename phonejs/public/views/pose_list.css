@@ -1,0 +1,7 @@
+﻿/* Put css styles for view here */
+.pose_list-view {
+  text-align: center;
+}
+.pose_list-view p {
+	padding: 5px;
+}
