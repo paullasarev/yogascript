@@ -7,5 +7,18 @@
 
     <p>Poses</p>
     
+    <div data-bind="dxList: { items: [
+      { id: 1, name: 'Pranamasana' },
+      { id: 2, name: 'Hasta Uttanasana' },
+      { id: 3, name: 'Hastapaadasana' },
+      { id: 4, name: 'Aekpaadprasarnaasana' },
+      { id: 5, name: 'Adho Mukha Svanasana' },
+      { id: 6, name: 'Ashtanga Namaskara' },
+      ] }">
+      
+      <div data-options="dxTemplate : { name: 'item' }"
+      data-bind="text: name, dxAction: '#pose/1'" ></div>    
+    </div>
+    
   </div>
 </div>

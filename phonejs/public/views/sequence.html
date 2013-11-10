@@ -1,20 +1,21 @@
-﻿<div data-options="dxView : { name: 'sequence_list', title: 'Schedule' } " >
-  <div class="sequence_list-view"  data-options="dxContent : { targetPlaceholder: 'content' } ">
+﻿<div data-options="dxView : { name: 'sequence', title: 'Sequence' } " >
+  <div class="sequence-view"  data-options="dxContent : { targetPlaceholder: 'content' } ">
     <div data-bind="dxToolbar: { items: [ 
     {  align: 'left', widget: 'button', options: { type: 'back', text: 'Back', clickAction: '#_back'}},
     {  align: 'right', widget: 'button', options: { type: 'normal', icon: 'menu', clickAction: '#home'}},
     ] }" ></div>
 
-    <p>Sequences</p>
+    <p>Sequence</p>
     
     <div data-bind="dxList: { items: [
-      { id: 1, name: 'Surya Namascar 1' },
-      { id: 2, name: 'Surya Namascar 2' },
-      { id: 3, name: 'Chandra Namascar' }
+      { id: 1, name: 'Pranamasana' },
+      { id: 2, name: 'Hasta Uttanasana' },
+      { id: 3, name: 'Hastapaadasana' },
+      { id: 4, name: 'Aekpaadprasarnaasana ' },
       ] }">
       
       <div data-options="dxTemplate : { name: 'item' }"
-      data-bind="text: name, dxAction: '#sequence/1'" ></div>    
+      data-bind="text: name, dxAction: '#pose/1'" ></div>    
     </div>
     
   </div>
