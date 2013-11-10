@@ -13,7 +13,7 @@
         YogaScript.notify(this.getMessage());
       },
       
-      trainingDate: moment().format('ddd, DD MMM, hA'),
+      trainingDate: moment().format('ddd, DD MMM, ha'),
       
       completionPercent: ko.observable(20),
     };
