@@ -31,11 +31,13 @@ $(function() {
 
 //type: 'info'|'warning'|'error'|'success'|'custom', default == "success"
 YogaScript.notify = function(message, type) {
-  var el = $("#toastContainer").dxToast('instance');
   if (!type) type = "success";
-  el.option("type", type);
-  el.option("message", message);
-  el.show();
+  DevExpress.ui.notify(message,type,3000);
+
+  // var el = $("#toastContainer").dxToast('instance');
+  // el.option("type", type);
+  // el.option("message", message);
+  // el.show();
 }
 
 YogaScript.error = function(message) {
