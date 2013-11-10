@@ -8,14 +8,9 @@
     
     <div data-bind="dxTextBox: { mode: 'search', value: '', placeholder:'type to search'}"></div>
     
-    <div data-bind="dxList: { items: [
-      { id: 1, name: 'Surya Namascar 1' },
-      { id: 2, name: 'Surya Namascar 2' },
-      { id: 3, name: 'Chandra Namascar' }
-      ] }">
-      
+    <div data-bind="dxList: { dataSource: dataSource}">
       <div data-options="dxTemplate : { name: 'item' }"
-      data-bind="text: name, dxAction: '#sequence/1'" ></div>    
+      data-bind="text: name, dxAction: '#sequence/{id}'" ></div>    
     </div>
     
   </div>
