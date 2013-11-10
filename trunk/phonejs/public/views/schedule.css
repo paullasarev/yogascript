@@ -1,9 +1,7 @@
 ﻿/* Put css styles for view here */
-
-.training-view {
+.schedule-view {
   text-align: center;
 }
-
-.training-view p {
+.schedule-view p {
 	padding: 5px;
 }
