@@ -12,4 +12,7 @@
 
 .pose-view .image{
   text-align: center;
+  background: #555;
+  height: 120px;
+  margin-right: 10px;
 }
