@@ -7,22 +7,7 @@ $(function() {
     DevExpress.devices.current('androidPhone');
     YogaScript.app = new DevExpress.framework.html.HtmlApplication({
         namespace: YogaScript,
-        
-        defaultLayout: "default", //slideout, navbar, simple, desktop, empty, split
-        // navigation: [
-          // {
-            // title: "About",
-            // action: "#about",
-            // icon: "info"
-          // },
-          // {
-            // title: "Home",
-            // action: "#home",
-            // icon: "home"
-          // },
-        // ]
-        
-        
+        defaultLayout: "default",
     });
     
     YogaScript.app.router.register(":view", {view: "home"});
@@ -34,11 +19,6 @@ YogaScript.notify = function(message, type, time) {
   if (!type) type = "success";
   if (!time) time = 1000;
   DevExpress.ui.notify(message, type, time);
-
-  // var el = $("#toastContainer").dxToast('instance');
-  // el.option("type", type);
-  // el.option("message", message);
-  // el.show();
 }
 
 YogaScript.error = function(message) {
@@ -52,7 +32,8 @@ YogaScript.home = function () {
       YogaScript.app.navigate("training");
     },
     doSchedule: function () {
-      YogaScript.error("Schedule is not yet implemented");
+      //YogaScript.error("Schedule is not yet implemented");
+      YogaScript.app.navigate("schedule");
     },
     doSequences: function () {
       YogaScript.error("Sequences is not yet implemented");
