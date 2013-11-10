@@ -29,22 +29,35 @@ $(function() {
     YogaScript.app.navigate();   
 });
 
-YogaScript.notify = function(message) {
+//type: 'info'|'warning'|'error'|'success'|'custom', default == "success"
+YogaScript.notify = function(message, type) {
   var el = $("#toastContainer").dxToast('instance');
+  if (!type) type = "success";
+  el.option("type", type);
   el.option("message", message);
   el.show();
+}
+
+YogaScript.error = function(message) {
+  YogaScript.notify(message, "error");
 }
 
 YogaScript.home = function () {
   return {
     doTraining: function () {
-      YogaScript.notify("Training!");
+      YogaScript.error("Training is not yet implemented");
     },
     doSchedule: function () {
-      YogaScript.notify("Show schedule");
+      YogaScript.error("Schedule is not yet implemented");
+    },
+    doSequences: function () {
+      YogaScript.error("Sequences is not yet implemented");
+    },
+    doPoses: function () {
+      YogaScript.error("Poses is not yet implemented");
     },
     doAbout: function () {
-      YogaScript.notify("Show About");
+      YogaScript.notify("YogaScript (C 2013, JAPA)");
     },
   };
 }
