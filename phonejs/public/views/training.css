@@ -7,3 +7,11 @@
 .training-view p {
 	padding: 5px;
 }
+
+.training-view .image{
+  text-align: center;
+  background: #555;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
