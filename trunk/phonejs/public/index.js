@@ -4,7 +4,7 @@ window.YogaScript = {};
 
 $(function() {
     // "iPhone", "iPhone5", "iPad", "iPadMini", "androidPhone", "androidTablet", "win8", "win8Phone", "msSurface", "desktop" and "tizen". 
-    DevExpress.devices.current('androidTablet');
+    DevExpress.devices.current('androidPhone');
     YogaScript.app = new DevExpress.framework.html.HtmlApplication({
         namespace: YogaScript,
         
@@ -45,7 +45,8 @@ YogaScript.error = function(message) {
 YogaScript.home = function () {
   return {
     doTraining: function () {
-      YogaScript.error("Training is not yet implemented");
+      //YogaScript.notify("Training!");
+      YogaScript.app.navigate("training");
     },
     doSchedule: function () {
       YogaScript.error("Schedule is not yet implemented");
