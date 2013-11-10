@@ -29,10 +29,11 @@ $(function() {
     YogaScript.app.navigate();   
 });
 
-//type: 'info'|'warning'|'error'|'success'|'custom', default == "success"
-YogaScript.notify = function(message, type) {
+//type: 'info'|'warning'|'error'|'success', default == "success"
+YogaScript.notify = function(message, type, time) {
   if (!type) type = "success";
-  DevExpress.ui.notify(message,type,3000);
+  if (!time) time = 1000;
+  DevExpress.ui.notify(message, type, time);
 
   // var el = $("#toastContainer").dxToast('instance');
   // el.option("type", type);
@@ -60,7 +61,7 @@ YogaScript.home = function () {
       YogaScript.error("Poses is not yet implemented");
     },
     doAbout: function () {
-      YogaScript.notify("YogaScript (C 2013, JAPA)");
+      YogaScript.notify("YogaScript (C 2013, JAPA)", 'success', 3000);
     },
   };
 }
