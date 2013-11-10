@@ -5,6 +5,7 @@ window.YogaScript = {};
 $(function() {
     // "iPhone", "iPhone5", "iPad", "iPadMini", "androidPhone", "androidTablet", "win8", "win8Phone", "msSurface", "desktop" and "tizen". 
     DevExpress.devices.current('androidPhone');
+
     YogaScript.app = new DevExpress.framework.html.HtmlApplication({
         namespace: YogaScript,
         defaultLayout: "default",
@@ -28,21 +29,19 @@ YogaScript.error = function(message) {
 YogaScript.home = function () {
   return {
     doTraining: function () {
-      //YogaScript.notify("Training!");
       YogaScript.app.navigate("training");
     },
     doSchedule: function () {
-      //YogaScript.error("Schedule is not yet implemented");
       YogaScript.app.navigate("schedule");
     },
     doSequences: function () {
-      YogaScript.error("Sequences is not yet implemented");
+      YogaScript.app.navigate("sequence_list");
     },
     doPoses: function () {
-      YogaScript.error("Poses is not yet implemented");
+      YogaScript.app.navigate("pose_list");
     },
     doAbout: function () {
-      YogaScript.notify("YogaScript (C 2013, JAPA)", 'success', 3000);
+      YogaScript.app.navigate("about");
     },
   };
 }

@@ -1,0 +1,9 @@
+﻿/* Put css styles for view here */
+
+.about-view {
+  text-align: center;
+}
+
+.about-view p {
+	padding: 20px;
+}

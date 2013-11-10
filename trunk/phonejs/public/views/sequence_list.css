@@ -1,0 +1,7 @@
+﻿/* Put css styles for view here */
+.sequence_list-view {
+  text-align: center;
+}
+.sequence_list-view p {
+	padding: 5px;
+}
