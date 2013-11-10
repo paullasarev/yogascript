@@ -4,7 +4,7 @@ window.YogaScript = {};
 
 $(function() {
     // "iPhone", "iPhone5", "iPad", "iPadMini", "androidPhone", "androidTablet", "win8", "win8Phone", "msSurface", "desktop" and "tizen". 
-    DevExpress.devices.current('androidPhone');
+    DevExpress.devices.current('androidTablet');
 
     YogaScript.app = new DevExpress.framework.html.HtmlApplication({
         namespace: YogaScript,

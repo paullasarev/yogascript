@@ -1,7 +1,15 @@
 ﻿/* Put css styles for view here */
 .pose-view {
-  text-align: center;
+  text-align: left;
+  margin-left: 10px;
 }
 .pose-view p {
 	padding: 5px;
+}
+
+.pose-view .dx-fieldset {
+}
+
+.pose-view .image{
+  text-align: center;
 }
