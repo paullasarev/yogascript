@@ -6,7 +6,7 @@
     {  align: 'right', widget: 'button', options: { type: 'normal', icon: 'menu', clickAction: '#home'}},
     ] }" ></div>
     
-    <div data-bind="dxTextBox: { mode: 'search', value: '', placeholder:'type to search'}"></div>
+    <div data-bind="dxTextBox: { mode: 'search', value: searchString, placeholder:'type to search'}"></div>
     
     <div data-bind="dxList: { dataSource: dataSource}">
       <div data-options="dxTemplate : { name: 'item' }"

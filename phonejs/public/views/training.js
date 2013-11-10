@@ -1,9 +1,11 @@
 ﻿YogaScript.training = function (params) {
     return {
       isStarted: false,
+      
       getMessage: function() {
         return this.isStarted ? "START" : "STOP";
       },
+      
       modeMessage: ko.observable("START"),
       
       startStop: function() {
