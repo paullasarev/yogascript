@@ -11,7 +11,7 @@ $(function() {
         defaultLayout: "default",
     });
     
-    YogaScript.app.router.register(":view", {view: "home"});
+    YogaScript.app.router.register(":view/:id", {view: "home", id: undefined});
     YogaScript.app.navigate();   
 });
 

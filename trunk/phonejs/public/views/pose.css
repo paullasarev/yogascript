@@ -1,0 +1,7 @@
+﻿/* Put css styles for view here */
+.pose-view {
+  text-align: center;
+}
+.pose-view p {
+	padding: 5px;
+}
