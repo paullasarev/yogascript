@@ -14,5 +14,7 @@
       },
       
       trainingDate: moment().format('ddd, DD MMM, hA'),
+      
+      completionPercent: ko.observable(20),
     };
 };

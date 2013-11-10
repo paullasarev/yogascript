@@ -9,8 +9,10 @@
   
     <p class="image">Pose image.</p>
     
-    <p>pose description</p>
+    <p class="description">pose description</p>
     
-    <div data-bind="dxButton: { text: modeMessage, clickAction: startStop, width:'60%' }"></div>
+    <div class="startstop" data-bind="dxButton: { text: modeMessage, clickAction: startStop, width:'60%' }"></div>
+    
+    <div data-bind="dxSlider:{min:0, max:100, value: completionPercent, disabled:true}"></div>    
   </div>
 </div>
