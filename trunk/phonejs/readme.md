@@ -4,7 +4,7 @@
 
 3. run "npm start" or "node app"
 
-4. browse http://localhost:3000/ys
+4. browse http://localhost:3000/
 
 the whole ./public/ folder is statically exposed by express web-server
 
