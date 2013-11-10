@@ -6,15 +6,9 @@
     {  align: 'right', widget: 'button', options: { type: 'normal', icon: 'menu', clickAction: '#home'}},
     ] }" ></div>
 
-    <div data-bind="dxList: { items: [
-      { id: 1, name: 'Pranamasana' },
-      { id: 2, name: 'Hasta Uttanasana' },
-      { id: 3, name: 'Hastapaadasana' },
-      { id: 4, name: 'Aekpaadprasarnaasana ' },
-      ] }">
-      
+    <div data-bind="dxList: { dataSource: dataSource}">
       <div data-options="dxTemplate : { name: 'item' }"
-      data-bind="text: name, dxAction: '#pose/1'" ></div>    
+      data-bind="text: name, dxAction: '#pose/{id}'" ></div>    
     </div>
     
   </div>
