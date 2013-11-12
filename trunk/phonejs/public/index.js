@@ -45,4 +45,24 @@ YogaScript.home = function () {
     },
   };
 }
+
+
+	var poses =  [
+		{id:0, name:'P10', level:2, durMin:'2m', durMax:'5m', url:'images/add.png'},
+		{id:1, name:'P11', level:2, durMin:'2m', durMax:'5m', url:'images/back.png'},
+		{id:2, name:'P12', level:2, durMin:'2m', durMax:'5m', url:'images/basecircle.png'},
+		{id:3, name:'P13', level:2, durMin:'2m', durMax:'5m', url:'images/camera.png'},
+		{id:4, name:'P14', level:2, durMin:'2m', durMax:'5m', url:'images/cancel.png'},
+		{id:5, name:'P15', level:3, durMin:'2m', durMax:'5m', url:'images/check.png'},
+		{id:6, name:'P16', level:3, durMin:'2m', durMax:'5m', url:'images/delete.png'},
+		{id:7, name:'P17', level:3, durMin:'2m', durMax:'5m', url:'images/download.png'}
+	];
+	var secus =  [
+		{id:0, name:'Surya 0', poses:[0,1]},
+		{id:1, name:'Surya Namascar 1', poses:[2,3]},
+		{id:2, name:'Surya Namascar 2', poses:[3,4]},
+		{id:3, name:'Chandra Namascar', poses:[5,6,7]}
+	];
+
+
   
