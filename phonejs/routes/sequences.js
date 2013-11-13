@@ -31,8 +31,7 @@ exports.sequences = function(req, res){
 
     var jsonFiles = files.filter(function(v){ return /\.json/.test(v); });
     jsonFiles.sort();
-    jsonFiles.splice(0, skip);
-    jsonFiles = jsonFiles.slice(0, take);
+    jsonFiles = jsonFiles.slice(skip, take);
     console.log('skip: ' + skip + ' take: ' + take + ' jsonFiles.length: ' + jsonFiles.length);
 
     async.map(jsonFiles, readJsonAsync, function(err, results) {
@@ -43,7 +42,6 @@ exports.sequences = function(req, res){
     
   });
 
-  //res.render('index', { title: 'Express' });
 };
 
 
