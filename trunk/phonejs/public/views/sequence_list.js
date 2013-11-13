@@ -10,6 +10,7 @@
     ],
   */  
     searchString: ko.observable(''),
+
     dataSource: DevExpress.data.createDataSource({
       load: function (loadOptions) {
         if (loadOptions.refresh) {
@@ -38,6 +39,15 @@
       }
     })    
   };
+  
+  ko.computed(function () {
+      return viewModel.searchString();
+  }).extend({
+      throttle: 500
+  }).subscribe(function () {
+      viewModel.dataSource.reload();
+  });  
+  
   
   return viewModel;
 };
