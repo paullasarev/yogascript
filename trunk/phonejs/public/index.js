@@ -57,6 +57,10 @@ YogaScript.home = function () {
 		{id:6, name:'P16', level:3, durMin:'2m', durMax:'5m', url:'images/delete.png'},
 		{id:7, name:'P17', level:3, durMin:'2m', durMax:'5m', url:'images/download.png'}
 	];
+  var myposes =  [
+    {id:0, name:'Dog', level:2, durMin:'2m', durMax:'5m', url:'images/dog.png'},
+    {id:1, name:'Cat', level:2, durMin:'2m', durMax:'5m', url:'images/cat.png'},
+  ];
 	var secus =  [
 		{id:0, name:'Surya 0', poses:[0,1]},
 		{id:1, name:'Surya Namascar 1', poses:[2,3]},
