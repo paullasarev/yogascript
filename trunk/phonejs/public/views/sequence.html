@@ -10,9 +10,25 @@
       <div data-options="dxTemplate : { name: 'item' }"
       data-bind="text: name, dxAction: '#pose/{id}'" ></div>    
     </div-->
-    <div data-bind="dxGallery: { height: 500, dataSource: myposes}">
+    <div data-bind="dxGallery: { height: 700, swipeEnabled: true, dataSource: myposes}">
       <div data-options="dxTemplate: { name: 'item'}">
-      <h1 data-bind="text: name"></h1>
-      <img data-bind="attr: { src: url }" />
-  </div>
-</div>
+        <h1 class = "pose-header" data-bind="text: name"></h1>
+        <img class = "pose-image" data-bind="attr: { src: url }" />
+        <div class="dx-fieldset">
+        <table class="sequence-center">
+          <tr>
+            <td class="sequence-text sequence-label">Description: </td>
+            <td class="sequence-text">
+               <div data-bind="text: desc"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="sequence-text sequence-label">Minumal duration: </td>
+            <td class="sequence-text">
+               <div data-bind="text: durMin"/>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    </div>
