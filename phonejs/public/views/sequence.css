@@ -2,6 +2,34 @@
 .sequence-view {
   text-align: center;
 }
+
 .sequence-view p {
 	padding: 5px;
+}
+
+.sequence-text {
+	padding-left: 20px;
+	vertical-align: top;
+	text-align: left;
+}
+
+.sequence-center
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;
+}
+
+.sequence-label,
+.pose-header {
+	color: #b4df5b;
+}
+
+.sequence-label {
+	text-align: right;
+}
+
+.pose-image {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
