@@ -8,7 +8,39 @@ $(function() {
 
     YogaScript.app = new DevExpress.framework.html.HtmlApplication({
         namespace: YogaScript,
-        defaultLayout: "default",
+        defaultLayout: "slideout",
+            navigation: [
+                {
+                    "id": "Home",
+                    "title": "Home",
+                    "action": "#home",
+                    "icon": "home"
+                },
+                {
+                    "id": "Training",
+                    "title": "Training",
+                    "action": "#training",
+                    "icon": "event"
+                },
+                {
+                    "id": "Schedule",
+                    "title": "Schedule",
+                    "action": "#schedule",
+                    "icon": "event"
+                },
+                {
+                    "id": "sequence_list",
+                    "title": "Sequences",
+                    "action": "#sequence_list",
+                    "icon": "card"
+                },
+                {
+                    "id": "pose_list",
+                    "title": "Poses",
+                    "action": "#pose_list",
+                    "icon": "card"
+                }
+            ]
     });
     
     YogaScript.app.router.register(":view/:id", {view: "home", id: undefined});
