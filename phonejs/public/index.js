@@ -90,8 +90,13 @@ YogaScript.home = function () {
 		{id:7, name:'P17', level:3, durMin:'2m', durMax:'5m', url:'images/download.png'}
 	];
   var myposes =  [
-    {id:0, name:'Dog', level:2, durMin:'2m', durMax:'5m', url:'images/dog.png'},
-    {id:1, name:'Cat', level:2, durMin:'2m', durMax:'5m', url:'images/cat.png'},
+    {id:0, name:'Sun salutation', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_1.png'},
+    {id:1, name:'Janubhalasana', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_2.png'},
+    {id:2, name:'Ardhabhujangasana', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_3.png'},
+    {id:3, name:'Hastapadasana', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_4.png'},
+    {id:4, name:'Ashtangasana', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_5.png'},
+    {id:5, name:'Bhujangasana', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_6.png'},
+    {id:6, name:'Adho Mukha Svanasana', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_7.png'},
   ];
 	var secus =  [
 		{id:0, name:'Surya 0', poses:[0,1]},
