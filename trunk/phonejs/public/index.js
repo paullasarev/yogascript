@@ -8,7 +8,8 @@ $(function() {
 
     YogaScript.app = new DevExpress.framework.html.HtmlApplication({
         namespace: YogaScript,
-        defaultLayout: "slideout",
+        defaultLayout: "default",
+        //defaultLayout: "slideout",
             navigation: [
                 {
                     "id": "Home",
