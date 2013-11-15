@@ -6,6 +6,7 @@
 	})
 
   return {
+    hideNavigationButton: true,
 	dataSource: pos
 /*
     dataSource: [
