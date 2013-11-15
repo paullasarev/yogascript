@@ -8,8 +8,8 @@ $(function() {
 
     YogaScript.app = new DevExpress.framework.html.HtmlApplication({
         namespace: YogaScript,
-        defaultLayout: "default",
-        //defaultLayout: "slideout",
+        //defaultLayout: "default",
+        defaultLayout: "slideout",
             navigation: [
                 {
                     "id": "Home",
@@ -21,7 +21,7 @@ $(function() {
                     "id": "Training",
                     "title": "Training",
                     "action": "#training",
-                    "icon": "event"
+                    "icon": "favorites"
                 },
                 {
                     "id": "Schedule",
@@ -33,17 +33,18 @@ $(function() {
                     "id": "sequence_list",
                     "title": "Sequences",
                     "action": "#sequence_list",
-                    "icon": "card"
+                    "icon": "group"
                 },
                 {
                     "id": "pose_list",
                     "title": "Poses",
                     "action": "#pose_list",
-                    "icon": "card"
+                    "icon": "user"
                 }
             ]
     });
-    
+
+    YogaScript.app.viewShown.add(onViewShown);
     YogaScript.app.router.register(":view/:id", {view: "home", id: undefined});
     YogaScript.app.navigate();   
 });
@@ -78,6 +79,14 @@ YogaScript.home = function () {
     },
   };
 }
+
+    function onViewShown(args) {
+        var viewInfo = args.viewInfo;
+        if (viewInfo.model.hideNavigationButton)
+            viewInfo.renderResult.$markup.find(".nav-button-item").remove();
+
+        //currentBackAction = viewInfo.model.backButtonDown;
+    }
 
 
 	var poses =  [
