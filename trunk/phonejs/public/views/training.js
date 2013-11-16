@@ -8,10 +8,10 @@
   var elementsVisible = true;
   var lookupVisible = false;
 
-  if (id < 0) {
+  /*if (id < 0) {
       elementsVisible = false; 
       lookupVisible = true;
-  }
+  }*/
   
   var viewModel = {
       isStarted: false,
