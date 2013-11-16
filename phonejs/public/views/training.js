@@ -1,12 +1,9 @@
 ﻿YogaScript.training = function (params) {
-  var pos = [];
-  secus[1].myposes.forEach(function(p){
-    pos.push(myposes[p]);
-  })
-
-    return {
-      dataSource: pos,
+  var id = 1; //params.id
+  
+  var viewModel = {
       isStarted: false,
+      id: id,
       
       getMessage: function() {
         return this.isStarted ? "START" : "STOP";
@@ -24,5 +21,20 @@
       trainingDate: moment().format('ddd, DD MMM, ha'),
       
       completionPercent: ko.observable(20),
-    };
+      dataSource: ko.observable([]),
+  };
+  
+  $.get('/api/sequences/' + viewModel.id)
+  .done(function (data) {
+    console.log("sequence: name=" + data.name + " poses=" + data.poses);
+    
+    var pos = [];
+    data.poses.forEach(function(p){
+		 pos.push(myposes[p]);
+    });
+    viewModel.dataSource(pos);
+  });
+
+  return viewModel;    
+ 
 };
