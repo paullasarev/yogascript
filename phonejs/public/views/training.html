@@ -3,14 +3,33 @@
     <div data-bind="dxToolbar: { items: [ 
     {  align: 'center', text: trainingDate },
     ] }" ></div>
-    
-  
-    <p class="image">Pose image.</p>
-    
-    <p class="description">pose description</p>
-    
+
+    <div data-bind="dxGallery: { height: 600, swipeEnabled: true, dataSource: dataSource, showNavButtons: true}">
+      <div data-options="dxTemplate: { name: 'item'}">
+        <h1 class = "pose-header" data-bind="text: name"></h1>
+        <img class = "pose-image" data-bind="attr: { src: url }" />
+        <div class="dx-fieldset">
+        <table class="sequence-center">
+          <tr>
+            <td class="sequence-text sequence-label">Description: </td>
+            <td class="sequence-text">
+               <div data-bind="text: desc"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="sequence-text sequence-label">Minumal duration: </td>
+            <td class="sequence-text">
+               <div data-bind="text: durMin"/>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    </div>
+
     <div class="startstop" data-bind="dxButton: { text: modeMessage, clickAction: startStop, width:'60%' }"></div>
     
-    <div data-bind="dxSlider:{min:0, max:100, value: completionPercent, disabled:true}"></div>    
+    <div data-bind="dxSlider:{min:0, max:100, value: completionPercent, disabled:true}"></div>  
+
   </div>
 </div>
