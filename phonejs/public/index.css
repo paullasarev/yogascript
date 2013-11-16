@@ -13,4 +13,15 @@ body {
   margin: 2px 0;
 }
 
-.copyright {position:fixed; bottom:0px; width: 100%; height:50px;}
+.copyright {
+  position:fixed;
+  bottom:0px;
+  width: 100%;
+  height:50px;
+}
+
+.startstop
+{
+  margin-top: 5px;
+  font-size: 120%;
+}
