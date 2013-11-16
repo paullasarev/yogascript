@@ -109,10 +109,10 @@ YogaScript.home = function () {
     {id:6, name:'Adho Mukha Svanasana', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_7.png', desc: "Downward-facing dog: Spread your fingers and press your palms into the mat, they should be shoulder width apart. Now, lift your hips up towards the sky, lengthening your spine. Gently straighten your legs, pressing your heels down into your mat as far as you can go."},
   ];
 	var secus =  [
-		{id:0, name:'Surya 0', poses:[0,1]},
-		{id:1, name:'Surya Namascar 1', poses:[2,3]},
-		{id:2, name:'Surya Namascar 2', poses:[3,4]},
-		{id:3, name:'Chandra Namascar', poses:[5,6,7]}
+		{id:0, name:'Surya 0', myposes:[0,1]},
+		{id:1, name:'Surya Namascar 1', myposes:[2,3]},
+		{id:2, name:'Surya Namascar 2', myposes:[3,4]},
+		{id:3, name:'Chandra Namascar', myposes:[4,5,6]}
 	];
 
 

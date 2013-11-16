@@ -1,8 +1,8 @@
 ﻿YogaScript.sequence = function (params) {
 
 	var pos = [];
-	secus[params.id].poses.forEach(function(p){
-		pos.push(poses[p]);
+	secus[params.id].myposes.forEach(function(p){
+		pos.push(myposes[p]);
 	})
 
   return {
