@@ -2,13 +2,6 @@
   var skip = 0;
   var PAGE_SIZE = 10;
   var viewModel = {
-  /*
-    dataSource: [
-      { id: 1, name: 'Surya Namascar 1' },
-      { id: 2, name: 'Surya Namascar 2' },
-      { id: 3, name: 'Chandra Namascar' },
-    ],
-  */  
     searchString: ko.observable(''),
 
     dataSource: DevExpress.data.createDataSource({
@@ -17,7 +10,7 @@
           skip = 0;
         }
         var deferred = new $.Deferred();
-        //$.get('http://sampleservices.devexpress.com/api/Products',
+        
         $.get('/api/sequences',
         {
           skip: skip,
