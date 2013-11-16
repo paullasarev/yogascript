@@ -3,8 +3,11 @@
 
 <!--div data-bind="dxLookup:{dataSource: employees, displayExpr: 'name', valueExpr: 'id'}"></div-->
 
-<br/><input type="button" value="<"></input> week 11.11.2013 - 17.11.2013 <input type="button" value=">"></input><br/>
-
+<br/>
+<div data-bind="dxButton: { icon: 'arrowleft' }"></div>
+week 11.11.2013 - 17.11.2013 
+<div data-bind="dxButton: { icon: 'arrowright' }"></div>
+<br/>
 <div>
     <div style="width:20%; float:left;" data-bind="dxList: { dataSource: scheduleDataDays, scrollByContent: false, scrollingEnabled: false, showScrollbar: false, disabled:true}">
 		  <div style="height:30px" data-options="dxTemplate : { name: 'item' }"
