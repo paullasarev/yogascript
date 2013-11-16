@@ -30,6 +30,7 @@ app.configure('development', function(){
 
 app.get('/api/sequences', seq.sequences);
 app.get('/api/sequences/:id', seq.sequence_by_id);
+//app.get('/api/poses', seq.poses);
 
 // app.get('/api/articles/:id', function(req, res) {
     // return ArticleModel.findById(req.params.id, function (err, article) {
