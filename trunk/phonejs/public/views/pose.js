@@ -2,6 +2,7 @@
 
   return {
 	hideNavigationButton: true,
+
     id: myposes[params.id].id,
     name: myposes[params.id].name,
     level: myposes[params.id].level,
