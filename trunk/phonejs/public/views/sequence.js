@@ -11,12 +11,7 @@
   .done(function (data) {
     console.log("sequence: name=" + data.name + " poses=" + data.poses);
     viewModel.namesec(data.name);
-    
-    var pos = [];
-    data.poses.forEach(function(p){
-		 pos.push(myposes[p]);
-    });
-    viewModel.poses(pos);
+    viewModel.poses(data.fullPoses);
   });
 
   return viewModel;    

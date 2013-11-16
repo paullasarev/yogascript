@@ -28,11 +28,12 @@
   .done(function (data) {
     console.log("sequence: name=" + data.name + " poses=" + data.poses);
     
-    var pos = [];
-    data.poses.forEach(function(p){
-		 pos.push(myposes[p]);
-    });
-    viewModel.dataSource(pos);
+    viewModel.dataSource(data.fullPoses);
+    // var pos = [];
+    // data.poses.forEach(function(p){
+		 // pos.push(myposes[p]);
+    // });
+    // viewModel.dataSource(pos);
   });
 
   return viewModel;    
