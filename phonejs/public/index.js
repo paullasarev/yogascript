@@ -106,31 +106,7 @@ YogaScript.home = function () {
 			rightArray[i] = {name:"empty", id: null, num:i*2+1};
 			scheduleDataDays[i].name = scheduleDataDays[i].name + (day + i);
 		}
-		$.each(/*DevExpress.data.createDataSource({
-		  load: function (loadOptions) {
-			if (loadOptions.refresh) {
-			  //dateFrom = 0;
-			}
-			var deferred = new $.Deferred();
-			//$.get('http://sampleservices.devexpress.com/api/Products',
-			$.get('/api/schedule',
-			{
-			  dateFrom: dateFrom
-			})
-			.done(function (result) {
-			  //Console.log(result);
-			  var mapped = $.map(result, function (data) {
-				return {
-				  id: data.id,
-				  name: data.name,
-				  num : data.num
-				};
-			  });
-			  deferred.resolve(mapped);
-			});
-			return deferred;
-		  }
-		})*/[
+		$.each([
 			{name:"seq 1", id: 1, num:0},
 			{name:"seq 2", id: 3, num:3},
 			{name:"seq 3", id: 2, num:6},
@@ -142,6 +118,7 @@ YogaScript.home = function () {
 			});YogaScript.app.navigate("schedule");
 	}
 
+  /*
   var myposes =  [
     {id:0, name:'Extended Mountain pose', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_1.png', desc: "Inhale through your nose and raise your arms up to the side, palms facing upwards. Extend your arms above your head with your hands in prayer position."},
     {id:1, name:'Janubhalasana', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_2.png', desc: "Swan dive to forward bend, be sure to bend your knees especially if you have tight hamstrings. This will protect the back: Exhale through your nose. Open your arms wide and bend at your waist to a standing forward bend. Your hands should touch the floor if you can or if not, the front of the ankles."},
@@ -166,4 +143,5 @@ YogaScript.home = function () {
     {id:20, name:'Purvottanasana ', level:2, durMin:'2m', durMax:'5m', url:'images/21.png', desc: "Downward-facing dog: Spread your fingers and press your palms into the mat, they should be shoulder width apart. Now, lift your hips up towards the sky, lengthening your spine. Gently straighten your legs, pressing your heels down into your mat as far as you can go."},
     {id:21, name:'Lotus', level:2, durMin:'2m', durMax:'5m', url:'images/22.png', desc: "Inhale through your nose and raise your arms up to the side, palms facing upwards. Extend your arms above your head with your hands in prayer position."}
   ];
+  */
   
