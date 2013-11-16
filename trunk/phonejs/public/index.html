@@ -73,7 +73,13 @@
     <div data-options="dxContent : { targetPlaceholder: 'content'}" style="text-align:center">
       <br>
       <div><b>Yoga Script</b></div>
+      <div>
+      <div>
       <img src="images/title.png " data-bind="dxButton:{clickAction: doTraining}">
+      </div>
+
+      <div class="startstop" data-bind="dxButton: { text: 'Start training', clickAction: doTraining, width:'300px' }"></div>
+      </div>
       
       <!--div style="margin-top:20px">
         <div class="button" data-bind="dxButton:{text:'Training', clickAction: doTraining, width:'80%'}"></div>
