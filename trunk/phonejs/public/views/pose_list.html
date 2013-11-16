@@ -3,7 +3,7 @@
     <div data-bind="dxToolbar: { items: [ 
     ] }" ></div>
 
-    <div data-bind="dxTextBox: { mode: 'search', value: '', placeholder:'type to search'}"></div>
+    <div data-bind="dxTextBox: { mode: 'search', value: searchString, valueUpdateEvent:'keyup',  placeholder:'type to search'}"></div>
     
     <div data-bind="dxList: { dataSource: dataSource}">
       <div data-options="dxTemplate : { name: 'item' }"
