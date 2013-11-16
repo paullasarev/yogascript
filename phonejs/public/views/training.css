@@ -29,3 +29,15 @@
 .training-view .startstop{
   margin-bottom: 15px;
 }
+
+.selectsequence {
+  color: #b4df5b !important;
+  font-size: 20px !important;
+  width: 400px;
+  height: 30px;
+  margin-left:auto;
+  margin-right:auto;
+  vertical-align:middle;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
