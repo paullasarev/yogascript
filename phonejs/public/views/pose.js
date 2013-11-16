@@ -2,12 +2,13 @@
 
   return {
 	hideNavigationButton: true,
-    id: poses[params.id].id,
-    name: poses[params.id].name,
-    level: poses[params.id].level,
-    durMin: poses[params.id].durMin,
-    durMax: poses[params.id].durMax,
-    url: poses[params.id].url,
+    id: myposes[params.id].id,
+    name: myposes[params.id].name,
+    level: myposes[params.id].level,
+    durMin: myposes[params.id].durMin,
+    durMax: myposes[params.id].durMax,
+    url: myposes[params.id].url,
+    desc: myposes[params.id].desc
 
 //ko.observable('asdf'),
   };

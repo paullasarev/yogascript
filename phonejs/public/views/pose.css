@@ -1,6 +1,6 @@
 ﻿/* Put css styles for view here */
 .pose-view {
-  text-align: left;
+  text-align: center;
   margin-left: 10px;
 }
 .pose-view p {
@@ -15,4 +15,31 @@
   background: #555;
   height: 120px;
   margin-right: 10px;
+}
+
+.sequence-text {
+	padding-left: 20px;
+	vertical-align: top;
+	text-align: left;
+}
+
+.sequence-center
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;
+}
+
+.sequence-label,
+.pose-header {
+	color: #b4df5b;
+}
+
+.sequence-label {
+	text-align: right;
+}
+
+.pose-image {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
