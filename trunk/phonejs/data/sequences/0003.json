@@ -1,4 +1,5 @@
 {
   "id": 3,
-  "name": "Chandra Namascar"
+  "name": "Chandra Namascar",
+  "poses":[15,16,17,18,19,20,21]
 }

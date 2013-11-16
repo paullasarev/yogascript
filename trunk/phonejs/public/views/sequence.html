@@ -9,7 +9,7 @@
       <div data-options="dxTemplate : { name: 'item' }"
       data-bind="text: name, dxAction: '#pose/{id}'" ></div>    
     </div-->
-    <div data-bind="dxGallery: { height: 700, swipeEnabled: true, dataSource: dataSource, showNavButtons: true}">
+    <div data-bind="dxGallery: { height: 700, swipeEnabled: true, dataSource: poses, showNavButtons: true}">
       <div data-options="dxTemplate: { name: 'item'}">
         <h1 class = "pose-header" data-bind="text: name"></h1>
         <img class = "pose-image" data-bind="attr: { src: url }" />
