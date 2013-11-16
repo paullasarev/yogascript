@@ -19,6 +19,8 @@
       searchString: ko.observable(''),
       elementsVisible: elementsVisible,
       lookupVisible: lookupVisible,
+      currentValue: 0,
+      durMax: $("#durMax").text().replace("m","")*60000,
       
       getMessage: function() {
         return this.isStarted ? "START" : "STOP";
@@ -73,7 +75,17 @@
           });
           return deferred;
         }
-      })
+      }),
+
+      showProgress: function() {
+          this.durMax= $("#durMax").text().replace("m","")*60000;
+          setInterval(function(){
+            if (this.currentValue<this.durMax) {
+              this.currentValue += 3000/this.durMax;
+            }
+          },
+          3000);
+      }
 
   };
   
