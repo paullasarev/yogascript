@@ -5,7 +5,8 @@
 
 var express = require('express')
   //, routes = require('./routes')
-  , seq = require('./routes/sequences')
+  , sequences_route = require('./routes/sequences')
+  , poses_route = require('./routes/poses')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
@@ -28,8 +29,11 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/api/sequences', seq.sequences);
-app.get('/api/sequences/:id', seq.sequence_by_id);
+app.get('/api/sequences', sequences_route.sequences);
+app.get('/api/sequences/:id', sequences_route.sequence_by_id);
+app.get('/api/poses', poses_route.poses);
+app.get('/api/poses/:id', poses_route.poses_by_id);
+
 //app.get('/api/poses', seq.poses);
 
 // app.get('/api/articles/:id', function(req, res) {
