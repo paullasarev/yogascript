@@ -1,9 +1,20 @@
 ﻿<div data-options="dxView : { name: 'schedule', title: 'Schedule' } " >
   <div class="schedule-view"  data-options="dxContent : { targetPlaceholder: 'content' } ">
-    <div data-bind="dxToolbar: { items: [     
-    ] }" ></div>
 
-    <p>Schedule</p>
+    <div style="width:10%; float:left;" data-bind="dxList: { dataSource: scheduleDataDays, scrollByContent: false, scrollingEnabled: false, showScrollbar: false, disabled:true}">
+		  <div data-options="dxTemplate : { name: 'item' }"
+		  data-bind="text: name" ></div>
+    </div>
+    <div style="width:90%; float:right;">
+		<div style="width:50%; float:left;" data-bind="dxList: { dataSource: scheduleDataLeft, scrollByContent: false, scrollingEnabled: false, showScrollbar: false, itemRender:onItemRender}">
+		  <div data-options="dxTemplate : { name: 'item' }"
+		  data-bind="text: name, dxAction: '#sequence/{id}'" ></div>    
+		</div>
+		<div style="width:50%; float:right;" data-bind="dxList: { dataSource: scheduleDataRight, scrollByContent: false, scrollingEnabled: false, showScrollbar: false, itemRender:onItemRender}">
+		  <div data-options="dxTemplate : { name: 'item' }"
+		  data-bind="text: name, dxAction: '#sequence/{id}'" ></div>
+		</div>
+    </div>
     
   </div>
 </div>

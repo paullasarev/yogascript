@@ -66,7 +66,7 @@ YogaScript.home = function () {
       YogaScript.app.navigate("training");
     },
     doSchedule: function () {
-      YogaScript.app.navigate("schedule");
+	  loadSchedule();      
     },
     doSequences: function () {
       YogaScript.app.navigate("sequence_list");
@@ -88,6 +88,59 @@ YogaScript.home = function () {
         //currentBackAction = viewInfo.model.backButtonDown;
     }
 
+
+	var weekNum = 0;
+	var dateFrom = new Date();
+	var leftArray = [];
+	var rightArray = []; 
+	var scheduleDataDays = [{name:'Mo '}, {name:'Tu '}, {name:'We '}, {name:'Th '}, {name:'Fr '}, {name:'Sa '}, {name:'Su '}];
+	var loadSchedule = function(){		
+		var dayNum = dateFrom.getDay();
+		dayNum = (dayNum - 1 >= 0)?(dayNum - 1):6;
+		dateFrom.setDate(dateFrom.getDate() - dayNum +7*weekNum);
+		var day = dateFrom.getUTCDate();
+		var month = dateFrom.getUTCMonth();
+		for(var i = 0;i<7;i++)
+		{
+			leftArray[i] = {name:"empty", id: null, num:i*2};
+			rightArray[i] = {name:"empty", id: null, num:i*2+1};
+			scheduleDataDays[i].name = scheduleDataDays[i].name + (day + i);
+		}
+		$.each(/*DevExpress.data.createDataSource({
+		  load: function (loadOptions) {
+			if (loadOptions.refresh) {
+			  //dateFrom = 0;
+			}
+			var deferred = new $.Deferred();
+			//$.get('http://sampleservices.devexpress.com/api/Products',
+			$.get('/api/schedule',
+			{
+			  dateFrom: dateFrom
+			})
+			.done(function (result) {
+			  //Console.log(result);
+			  var mapped = $.map(result, function (data) {
+				return {
+				  id: data.id,
+				  name: data.name,
+				  num : data.num
+				};
+			  });
+			  deferred.resolve(mapped);
+			});
+			return deferred;
+		  }
+		})*/[
+			{name:"seq 1", id: 1, num:0},
+			{name:"seq 2", id: 3, num:3},
+			{name:"seq 3", id: 2, num:6},
+			{name:"seq 4", id: 1, num:7}
+			], function(i, el){if(el.num%2==0)
+				{leftArray[el.num/2] = el;}
+			else
+				{rightArray[(el.num-1)/2] = el;} 
+			});YogaScript.app.navigate("schedule");
+	}
 
 	var poses =  [
 		{id:0, name:'P10', level:2, durMin:'2m', durMax:'5m', url:'images/add.png'},
