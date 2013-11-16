@@ -43,17 +43,23 @@
 	          <tr>
 	            <td class="sequence-text sequence-label">Minumal duration: </td>
 	            <td class="sequence-text">
-	               <div data-bind="text: durMin"/>
+	               <div id='durMin'data-bind="text: durMin"/>
+	            </td>
+	          </tr>
+	          <tr>
+	            <td class="sequence-text sequence-label">Maximal duration: </td>
+	            <td class="sequence-text">
+	               <div id='durMax'data-bind="text: durMax"/>
 	            </td>
 	          </tr>
 	        </table>                 
-	      </div>
-		<div id="slider" data-bind="dxSlider:{min:0, max:durMax, value: 0, disabled:true, activeStateEnabled: false, width:1000}"></div> 
+	      </div>		
 		<div id='textboxid'data-bind="dxTextBox:{value:id, visible:false}"></div>
     </div>
     </div>
     
-	<div class="startstop" data-bind="dxButton: { text: 'Start', clickAction: startStop, width:'60%', visible: elementsVisible}"></div>
+    <div id="slider" data-bind="dxSlider:{min:0, max:100, value: 50, disabled:false}"></div> 
+	<div class="startstop" data-bind="dxButton: { text: modeMessage, clickAction: startStop, width:'60%', visible: elementsVisible}"></div>
   
   </div>
 </div>
