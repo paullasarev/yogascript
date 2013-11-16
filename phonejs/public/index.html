@@ -61,6 +61,8 @@
     <link rel="stylesheet" type="text/css" href="views/about.css" />
     <script type="text/javascript" src="views/about.js"></script>
     <link rel="dx-template" type="text/html" href="views/about.html"/>
+
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"> 
 </head>
 <body>
   <!--<div class="dx-viewport"></div>-->
@@ -81,6 +83,9 @@
       <div class="startstop" data-bind="dxButton: { text: 'Start training', clickAction: doTraining, width:'300px' }"></div>
       </div>
       
+ <!--div id="fb-root"></div>          
+     
+     <div class="fb-login-button">Login with Facebook</div-->  
       <!--div style="margin-top:20px">
         <div class="button" data-bind="dxButton:{text:'Training', clickAction: doTraining, width:'80%'}"></div>
         <div class="button" data-bind="dxButton:{text:'Schedule', clickAction: doSchedule, width:'80%'}"></div>
@@ -90,13 +95,17 @@
       <div style="margin-top:20px">
         <div class="button" data-bind="dxButton:{text:'About', clickAction: doAbout, width:'80%'}"></div>
       </div-->
+    
+
     <div class="copyright">
         <p>YogaScript is an application to help people make the yoga exercises individually</p>
         <p>&copy; 2013 JAPA team</p>
+      
       <div id="toastContainer" data-bind="dxToast:{message:'Action message', type:'success', displayTime: 3000 }"></div> 
     </div>
+
     </div>
   </div>
- 
+
 </body>
 </html>
