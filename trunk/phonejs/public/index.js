@@ -66,7 +66,6 @@ YogaScript.home = function () {
       YogaScript.app.navigate("training");
     },
     doSchedule: function () {
-	  //loadSchedule();
 		YogaScript.app.navigate("schedule");      
     },
     doSequences: function () {
@@ -89,12 +88,17 @@ YogaScript.home = function () {
         //currentBackAction = viewInfo.model.backButtonDown;
     }
 
+    function dodo(args) {
+        debugger;
+        //alert("dodo");
+    };
 
 	var weekNum = 0;
 	var dateFrom = new Date();
 	var leftArray = [];
 	var rightArray = []; 
 	var scheduleDataDays = [{name:'Mo '}, {name:'Tu '}, {name:'We '}, {name:'Th '}, {name:'Fr '}, {name:'Sa '}, {name:'Su '}];
+
 	var sequencelistSource;
 	var loadSchedule = function(){		
 		var dayNum = dateFrom.getDay();
@@ -109,10 +113,10 @@ YogaScript.home = function () {
 			scheduleDataDays[i].name = scheduleDataDays[i].name + (day + i);
 		}
 		$.each([
-			{name:"seq 1", id: 1, num:0},
-			{name:"seq 2", id: 3, num:3},
-			{name:"seq 3", id: 2, num:6},
-			{name:"seq 4", id: 1, num:7}
+			{name:"Surya Namascar 1", id: 1, num:0},
+			{name:"Surya Namascar 2", id: 3, num:3},
+			{name:"Chandra Namascar", id: 2, num:6},
+			{name:"Surya Namascar 1", id: 1, num:7}
 			], function(i, el){if(el.num%2==0)
 				{leftArray[el.num/2] = el;}
 			else
@@ -120,35 +124,3 @@ YogaScript.home = function () {
 			});
 	}
 	
-/*	var loadSequenceList = function(){	
-		sequencelistSource = ko.observable(DevExpress.data.createDataSource({
-			 lookup: function (lookupOptions)
-			 {},
-		  load: function (loadOptions) {
-			if (loadOptions.refresh) {
-			  skip = 0;
-			}
-			var deferred = new $.Deferred();
-			
-			$.get('/api/sequences',
-			{
-			  skip: skip,
-			  take: PAGE_SIZE,
-			  searchString: viewModel.searchString()
-			})
-			.done(function (result) {
-			  //Console.log(result);
-			  skip += PAGE_SIZE;
-			  var mapped = $.map(result, function (data) {
-				return {
-				  name: data.name,
-				  id: data.id
-				};
-			  });
-			  deferred.resolve(mapped);
-			});
-			return deferred;
-		  }
-		}));
-}*/
-
