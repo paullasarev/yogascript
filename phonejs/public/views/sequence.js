@@ -7,7 +7,8 @@
 
   return {
     hideNavigationButton: true,
-	dataSource: pos
+    namesec: secus[params.id].name,
+  	dataSource: pos
 /*
     dataSource: [
       { id: 1, name: 'Pranamasana' },
