@@ -142,16 +142,6 @@ YogaScript.home = function () {
 			});YogaScript.app.navigate("schedule");
 	}
 
-	var poses =  [
-		{id:0, name:'P10', level:2, durMin:'2m', durMax:'5m', url:'images/add.png'},
-		{id:1, name:'P11', level:2, durMin:'2m', durMax:'5m', url:'images/back.png'},
-		{id:2, name:'P12', level:2, durMin:'2m', durMax:'5m', url:'images/basecircle.png'},
-		{id:3, name:'P13', level:2, durMin:'2m', durMax:'5m', url:'images/camera.png'},
-		{id:4, name:'P14', level:2, durMin:'2m', durMax:'5m', url:'images/cancel.png'},
-		{id:5, name:'P15', level:3, durMin:'2m', durMax:'5m', url:'images/check.png'},
-		{id:6, name:'P16', level:3, durMin:'2m', durMax:'5m', url:'images/delete.png'},
-		{id:7, name:'P17', level:3, durMin:'2m', durMax:'5m', url:'images/download.png'}
-	];
   var myposes =  [
     {id:0, name:'Extended Mountain pose', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_1.png', desc: "Inhale through your nose and raise your arms up to the side, palms facing upwards. Extend your arms above your head with your hands in prayer position."},
     {id:1, name:'Janubhalasana', level:2, durMin:'2m', durMax:'5m', url:'images/SN1_2.png', desc: "Swan dive to forward bend, be sure to bend your knees especially if you have tight hamstrings. This will protect the back: Exhale through your nose. Open your arms wide and bend at your waist to a standing forward bend. Your hands should touch the floor if you can or if not, the front of the ankles."},
@@ -176,12 +166,4 @@ YogaScript.home = function () {
     {id:20, name:'Purvottanasana ', level:2, durMin:'2m', durMax:'5m', url:'images/21.png', desc: "Downward-facing dog: Spread your fingers and press your palms into the mat, they should be shoulder width apart. Now, lift your hips up towards the sky, lengthening your spine. Gently straighten your legs, pressing your heels down into your mat as far as you can go."},
     {id:21, name:'Lotus', level:2, durMin:'2m', durMax:'5m', url:'images/22.png', desc: "Inhale through your nose and raise your arms up to the side, palms facing upwards. Extend your arms above your head with your hands in prayer position."}
   ];
-	var secus =  [
-		{id:0, name:'Surya 0', myposes:[7,8,9,10,11,12,13,14]},
-		{id:1, name:'Surya Namascar 1', myposes:[0,1,2,3,4,5,6,1,0]},
-		{id:2, name:'Surya Namascar 2', myposes:[0,1,9,2,3,4,5,6,11,9,1,0]},
-		{id:3, name:'Chandra Namascar', myposes:[15,16,17,18,19,20,21]}
-	];
-
-
   

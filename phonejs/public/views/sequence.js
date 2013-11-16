@@ -1,21 +1,23 @@
 ﻿YogaScript.sequence = function (params) {
 
-	var pos = [];
-	secus[params.id].myposes.forEach(function(p){
-		pos.push(myposes[p]);
-	})
-
-  return {
+  var viewModel = {
     hideNavigationButton: true,
-    namesec: secus[params.id].name,
-  	dataSource: pos
-/*
-    dataSource: [
-      { id: 1, name: 'Pranamasana' },
-      { id: 2, name: 'Hasta Uttanasana' },
-      { id: 3, name: 'Hastapaadasana' },
-      { id: 4, name: 'Aekpaadprasarnaasana ' },
-    ],
-*/
+    namesec: ko.observable(''),
+    id: params.id,
+  	poses: ko.observable([]),
   };
+
+  $.get('/api/sequences/' + viewModel.id)
+  .done(function (data) {
+    console.log("sequence: name=" + data.name + " poses=" + data.poses);
+    viewModel.namesec(data.name);
+    
+    var pos = [];
+    data.poses.forEach(function(p){
+		 pos.push(myposes[p]);
+    });
+    viewModel.poses(pos);
+  });
+
+  return viewModel;    
 };

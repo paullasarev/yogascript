@@ -72,6 +72,40 @@ exports.sequences = function(req, res){
   }
 };
 
+function findById(source, id) {
+  for (var i = 0; i < source.length; i++) {
+    if (source[i].id == id) {
+      return source[i];
+    }
+  }
+  
+  return null;
+}
+
+sendOne = function(res, results, id) {
+  console.log("sendOne: id=" + id);
+  var obj = findById(results, id);
+  if (obj)
+  {
+    console.log("sendOne: obj=" + obj);
+    res.send(obj);
+  }
+  else
+    res.end();
+};
+
 exports.sequence_by_id = function(req, res){
   var id = req.params.id;
+  console.log("sequence_by_id: id=" + id);
+  
+  if (CachedResults)
+  {
+    sendOne(res, CachedResults, id);
+  }
+  else
+  {
+    load(function(){
+      sendOne(res, CachedResults, id);
+    });
+  }
 };
