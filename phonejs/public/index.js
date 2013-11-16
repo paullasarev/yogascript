@@ -5,7 +5,6 @@ window.YogaScript = {};
 $(function() {
     // "iPhone", "iPhone5", "iPad", "iPadMini", "androidPhone", "androidTablet", "win8", "win8Phone", "msSurface", "desktop" and "tizen". 
     DevExpress.devices.current('androidTablet');
-
     YogaScript.app = new DevExpress.framework.html.HtmlApplication({
         namespace: YogaScript,
         //defaultLayout: "default",
@@ -46,7 +45,8 @@ $(function() {
 
     YogaScript.app.viewShown.add(onViewShown);
     YogaScript.app.router.register(":view/:id", {view: "home", id: undefined});
-    YogaScript.app.navigate();   
+    YogaScript.app.navigate();  
+	loadSchedule();	
 });
 
 //type: 'info'|'warning'|'error'|'success', default == "success"
@@ -66,7 +66,8 @@ YogaScript.home = function () {
       YogaScript.app.navigate("training");
     },
     doSchedule: function () {
-	  loadSchedule();      
+	  //loadSchedule();
+		YogaScript.app.navigate("schedule");      
     },
     doSequences: function () {
       YogaScript.app.navigate("sequence_list");
@@ -94,6 +95,7 @@ YogaScript.home = function () {
 	var leftArray = [];
 	var rightArray = []; 
 	var scheduleDataDays = [{name:'Mo '}, {name:'Tu '}, {name:'We '}, {name:'Th '}, {name:'Fr '}, {name:'Sa '}, {name:'Su '}];
+	var sequencelistSource;
 	var loadSchedule = function(){		
 		var dayNum = dateFrom.getDay();
 		dayNum = (dayNum - 1 >= 0)?(dayNum - 1):6;
@@ -102,8 +104,8 @@ YogaScript.home = function () {
 		var month = dateFrom.getUTCMonth();
 		for(var i = 0;i<7;i++)
 		{
-			leftArray[i] = {name:"empty", id: null, num:i*2};
-			rightArray[i] = {name:"empty", id: null, num:i*2+1};
+			leftArray[i] = {name:" ", id: null, num:i*2};
+			rightArray[i] = {name:" ", id: null, num:i*2+1};
 			scheduleDataDays[i].name = scheduleDataDays[i].name + (day + i);
 		}
 		$.each([
@@ -115,6 +117,38 @@ YogaScript.home = function () {
 				{leftArray[el.num/2] = el;}
 			else
 				{rightArray[(el.num-1)/2] = el;} 
-			});YogaScript.app.navigate("schedule");
+			});
 	}
+	
+/*	var loadSequenceList = function(){	
+		sequencelistSource = ko.observable(DevExpress.data.createDataSource({
+			 lookup: function (lookupOptions)
+			 {},
+		  load: function (loadOptions) {
+			if (loadOptions.refresh) {
+			  skip = 0;
+			}
+			var deferred = new $.Deferred();
+			
+			$.get('/api/sequences',
+			{
+			  skip: skip,
+			  take: PAGE_SIZE,
+			  searchString: viewModel.searchString()
+			})
+			.done(function (result) {
+			  //Console.log(result);
+			  skip += PAGE_SIZE;
+			  var mapped = $.map(result, function (data) {
+				return {
+				  name: data.name,
+				  id: data.id
+				};
+			  });
+			  deferred.resolve(mapped);
+			});
+			return deferred;
+		  }
+		}));
+}*/
 

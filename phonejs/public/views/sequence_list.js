@@ -4,7 +4,11 @@
   var viewModel = {
     searchString: ko.observable(''),
 
+	
+    //dataSource: sequencelistSource();
     dataSource: DevExpress.data.createDataSource({
+		 lookup: function (lookupOptions)
+		 {},
       load: function (loadOptions) {
         if (loadOptions.refresh) {
           skip = 0;
@@ -30,9 +34,10 @@
         });
         return deferred;
       }
-    })    
+    })  
   };
   
+	//sequencelistSource = ko.observable(viewModel.dataSource);
   ko.computed(function () {
       return viewModel.searchString();
   }).extend({

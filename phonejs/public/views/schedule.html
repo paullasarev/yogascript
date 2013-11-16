@@ -6,15 +6,18 @@
 		  data-bind="text: name" ></div>
     </div>
     <div style="width:90%; float:right;">
-		<div style="width:50%; float:left;" data-bind="dxList: { dataSource: scheduleDataLeft, scrollByContent: false, scrollingEnabled: false, showScrollbar: false, itemRender:onItemRender}">
-		  <div data-options="dxTemplate : { name: 'item' }"
-		  data-bind="text: name, dxAction: '#sequence/{id}'" ></div>    
+		<div style="width:50%; float:left;" data-bind="dxList: { dataSource: scheduleDataLeft, scrollByContent: false, scrollingEnabled: false, showScrollbar: false}">
+		  <div data-options="dxTemplate : { name: 'item' }">
+				<div style='padding:0px;' class="dx-field-value" data-bind="dxLookup: {placeholder:name, dataSource: sequencelistSrc, displayExpr: 'name', valueExpr: 'id', value: id, width:'100%' }"></div>			
+		  </div>		
 		</div>
-		<div style="width:50%; float:right;" data-bind="dxList: { dataSource: scheduleDataRight, scrollByContent: false, scrollingEnabled: false, showScrollbar: false, itemRender:onItemRender}">
-		  <div data-options="dxTemplate : { name: 'item' }"
-		  data-bind="text: name, dxAction: '#sequence/{id}'" ></div>
+		<div style="width:50%; float:right;" data-bind="dxList: { dataSource: scheduleDataRight, scrollByContent: false, scrollingEnabled: false, showScrollbar: false}">
+		  <div data-options="dxTemplate : { name: 'item' }">
+				<div style='padding:0px;' class="dx-field-value" data-bind="dxLookup: {placeholder:name, dataSource: sequencelistSrc, displayExpr: 'name', valueExpr: 'id', value: id, width:'100%' }"></div>			
+		  </div>		
 		</div>
     </div>
+	
     
   </div>
 </div>
